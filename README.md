@@ -8,11 +8,11 @@ Each folder inside this repository represents a standalone project, built while 
   A simple React app demonstrating state management and production-like setup.  
   [Source Code](./Counter-App)
 
-<!-- - **Todo App**  
+ - **Todo App**  
   A React app for managing daily tasks with local state and reusable components.  
-  [Source Code](./Todo-App)
+  [Source Code](./ToDo-List)
 
-- **Weather App**  
+<!--- **Weather App**  
   Uses a weather API to fetch and display real-time weather information.  
   [Source Code](./Weather-App) -->
 
