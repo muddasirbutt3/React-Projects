@@ -22,30 +22,41 @@ export const PendingTask = () => {
       );
     });
   };
+  if (savedTasks.filter((task) => !task.completed).length == 0) {
+    return <p className="no-task">No pending tasks.</p>;
+  }
   return (
     <div className="Alltask-comp">
-      {savedTasks.filter((task) => !task.completed).length == 0 ? (
-        <p className="no-task">No pending tasks.</p>
-      ) : (
-        savedTasks
-          .filter((task) => !task.completed)
-          .map((task) => (
-            <div className={`todo-item `} key={task.id} taskid={task.id}>
-              <input
-                type="checkbox"
-                id="input"
-                onChange={handleCheck}
-                checked={task.completed}
-                taskid={task.id}
-              />
-              <p>{task.task}</p>
-              <div className="bth-group">
-                <button onClick={() => { handleEdit(task.id)}}><i className="fa-solid fa-pen-to-square"></i></button>
-                <button onClick={() => { handleDel(task.id)}}><i className="fa-solid fa-trash-can"></i></button>
-              </div>
+      {savedTasks
+        .filter((task) => !task.completed)
+        .map((task) => (
+          <div className={`todo-item `} key={task.id} taskid={task.id}>
+            <input
+              type="checkbox"
+              id="input"
+              onChange={handleCheck}
+              checked={task.completed}
+              taskid={task.id}
+            />
+            <p>{task.task}</p>
+            <div className="bth-group">
+              <button
+                onClick={() => {
+                  handleEdit(task.id);
+                }}
+              >
+                <i className="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button
+                onClick={() => {
+                  handleDel(task.id);
+                }}
+              >
+                <i className="fa-solid fa-trash-can"></i>
+              </button>
             </div>
-          ))
-      )}
+          </div>
+        ))}
     </div>
   );
 };

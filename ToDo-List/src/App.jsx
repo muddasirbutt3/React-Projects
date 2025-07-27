@@ -12,17 +12,13 @@ function App() {
   let [totalNum, setTotalNum] = useState(0);
   useEffect(() => {
     if (location.pathname == "/") {
-      setTotalNum((prev) => (prev = savedTasks.length));
+      setTotalNum(savedTasks.length);
     } else if (location.pathname == "/pending") {
-      setTotalNum(
-        (prev) => (prev = savedTasks.filter((task) => !task.completed).length)
-      );
+      setTotalNum(savedTasks.filter((task) => !task.completed).length);
     } else if (location.pathname == "/completed") {
-      setTotalNum(
-        (prev) => (prev = savedTasks.filter((task) => task.completed).length)
-      );
+      setTotalNum(savedTasks.filter((task) => task.completed).length)
     }
-  }, [location, totalNum]);
+  });
   let [editTask, setEditTask] = useState("");
   
   let [savedTasks, setSavedTasks] = useState(() => {

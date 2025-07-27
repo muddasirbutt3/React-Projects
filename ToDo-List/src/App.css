@@ -20,7 +20,7 @@ body {
 }
 .main {
   width: 450px;
-  min-height: 350px;
+  min-height: 300px;
   background-color: #fcf5eb;
   display: flex;
   flex-direction: column;

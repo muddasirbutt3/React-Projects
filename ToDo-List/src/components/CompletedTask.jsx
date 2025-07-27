@@ -17,29 +17,36 @@ export const CompletedTask = () => {
       );
     });
   };
+  if (savedTasks.filter((task) => task.completed) == 0) {
+    return <p className="no-task">No comleted tasks.</p>;
+  }
   return (
     <div className="Alltask-comp">
-      {savedTasks.filter((task) => task.completed) == 0 ? (
-        <p className="no-task">No completed tasks.</p>
-      ) : (
-        savedTasks
-          .filter((task) => task.completed)
-          .map((task) => (
-            <div className="todo-item" key={task.id} taskid={task.id}>
-              {task.completed || <input
+      {savedTasks
+        .filter((task) => task.completed)
+        .map((task) => (
+          <div className="todo-item" key={task.id} taskid={task.id}>
+            {task.completed || (
+              <input
                 type="checkbox"
                 id="input"
                 onChange={handleCheck}
                 checked={task.completed}
                 taskid={task.id}
-              />}
-              <p className='complete'>{task.task}</p>
-              <div className="bth-group">
-                <button onClick={() => { handleDel(task.id)}}><i className="fa-solid fa-trash-can"></i></button>
-              </div>
+              />
+            )}
+            <p className="complete">{task.task}</p>
+            <div className="bth-group">
+              <button
+                onClick={() => {
+                  handleDel(task.id);
+                }}
+              >
+                <i className="fa-solid fa-trash-can"></i>
+              </button>
             </div>
-          ))
-      )}
+          </div>
+        ))}
     </div>
   );
 };
