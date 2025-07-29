@@ -35,6 +35,7 @@ function App() {
       border: theme ? "1px solid #E5E7EB" : "1px solid #27282E",
     }),
   };
+  document.body.style.backgroundColor = theme ? '#F9FAFB' : '#23252a'
   useEffect(() => {
     localStorage.setItem("prevSearch", JSON.stringify(prevSearches));
   }, [prevSearches]);

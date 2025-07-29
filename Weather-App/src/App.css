@@ -5,6 +5,13 @@
   font-family: Arial, Helvetica, sans-serif;
   user-select: none;
 }
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body {
   width: 100%;
   min-height: 100vh;
@@ -12,6 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #23252a;
+  transition: background 0.3s ease-in;
 }
 .main {
   width: 400px;
@@ -20,10 +28,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 25px;
+  padding: 20px;
   border-radius: 24px;
-  box-shadow: 0px 0px 25px rgb(0, 0, 0);
-  transition: background .3s ease-in;
+  box-shadow: 0px 0px 15px rgb(0, 0, 0);
+  transition: background 0.3s ease-in;
 }
 .title-toggles {
   width: 100%;
@@ -36,65 +44,92 @@ body {
   font-size: 34px;
   font-weight: bold;
   color: aliceblue;
-  transition: color .3s ease-in;
+  transition: color 0.3s ease-in;
 }
-.toggles{
+.toggles {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  transition: background .3s ease-in;
+  transition: background 0.3s ease-in;
 }
-.units{
+.units {
   padding: 4px 8px;
   font-size: 16px;
-  background-color: #25272D;
+  background-color: #25272d;
   border-radius: 50px;
   border: 1px solid black;
   text-align: center;
   align-content: center;
-  color: #7C818C;
+  color: #7c818c;
   cursor: pointer;
-  transition: background .3s ease-in;
+  transition: background 0.3s ease-in;
 }
-.theme{
+.theme {
   cursor: pointer;
-  background-color: #25272D;
+  background-color: #25272d;
   padding: 6px;
   font-size: 14px;
   border-radius: 50%;
   text-align: center;
   align-content: center;
-  color: #7C818C;
+  color: #7c818c;
   border: 1px solid black;
-  transition: background .3s ease-in;
+  transition: background 0.3s ease-in;
 }
-.tabs{
+.tabs {
   width: 100%;
   height: 40px;
-  background-color: #27282E;
+  background-color: #27282e;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 12px;
   margin-bottom: 15px;
   border: 1px solid black;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
-.link{
-  color: #7C818C;
+.link {
+  color: #7c818c;
   text-decoration: none;
   width: 50%;
   height: 100%;
   text-align: center;
   align-content: center;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
-.active{
-  background-color: #4368CD;
+.active {
+  background-color: #4368cd;
   border-radius: 12px;
   color: white;
 }
-.display{
+.display {
   width: 100%;
+}
+@media (max-width: 576px) {
+  .main {
+    width: 85%;
+    padding: 15px;
+  }
+  .title-toggles {
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .toggles {
+    gap: 6px;
+  }
+  .units {
+    padding: 2px 4px;
+    font-size: 16px;
+  }
+  .theme {
+    padding: 4px;
+  }
+  .tabs {
+    height: 35px;
+    margin-bottom: 10px;
+  }
 }

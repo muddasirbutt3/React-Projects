@@ -11,7 +11,7 @@
   gap: 5px;
   flex-direction: column;
   border: 1px solid black;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 .history::-webkit-scrollbar {
   display: none;
@@ -26,7 +26,7 @@
   align-items: center;
   border: 1px solid black;
   color: aliceblue;
-  transition: all .3s ease-in ;
+  transition: all 0.3s ease-in;
 }
 .historyItem:hover {
   transform: translateY(-3px);
@@ -34,11 +34,10 @@
 button {
   border-radius: 8px;
   border: none;
-  padding:  4px;
+  padding: 4px;
   cursor: pointer;
   font-size: 16px;
-  transition: all .3s ease-in;
-
+  transition: all 0.3s ease-in;
 }
 .noHistory {
   width: 100%;
@@ -48,5 +47,15 @@ button {
   text-align: center;
   color: white;
   align-content: center;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
+}
+@media (max-width: 576px) {
+  button {
+    padding: 2px;
+    font-size: 14px;
+  }
+  .noHistory {
+    height: 35px;
+    font-size: 14px;
+  }
 }

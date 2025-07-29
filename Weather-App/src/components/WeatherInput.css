@@ -15,9 +15,9 @@
   font-size: 16px;
   border: 1px solid black;
   padding-left: 10px;
-  background-color: #282B2F;
+  background-color: #282b2f;
   color: white;
-  transition: all .3s ease-in ;
+  transition: all 0.3s ease-in;
 }
 .btn {
   width: 40px;
@@ -25,11 +25,26 @@
   border-radius: 8px;
   font-size: 18px;
   border: none;
-  color: #71B1F8;
+  color: #71b1f8;
   border: 1px solid black;
   cursor: pointer;
   position: absolute;
   right: 0px;
   top: 0px;
-  background-color: #27292F;
+  background-color: #27292f;
+}
+@media (max-width: 576px) {
+  .search {
+    margin-bottom: 8px;
+  }
+  .input {
+    height: 35px;
+    font-size: 14px;
+    padding-left: 6px;
+  }
+  .btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
 }
