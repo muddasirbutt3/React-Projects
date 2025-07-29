@@ -65,7 +65,7 @@ function App() {
         </nav>
 
         <Routes>
-          <Route index path="/" element={<AllTask />} />
+          <Route path="/" element={<AllTask />} />
           <Route path="/pending" element={<PendingTask />} />
           <Route path="/completed" element={<CompletedTask />} />
         </Routes>
