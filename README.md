@@ -12,7 +12,7 @@ Each folder inside this repository represents a standalone project, built while 
   A React app for managing daily tasks with local state and reusable components.  
   [Source Code](./ToDo-List)
 
-- - **Weather App**  
+ - **Weather App**  
   React app using OpenWeather API to display real-time weather with search history and theme toggle.  
   [Source Code](./Weather-App)
 
