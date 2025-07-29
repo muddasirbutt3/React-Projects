@@ -3,7 +3,7 @@
 A simple and beautiful weather application built using **React** and **OpenWeather API**.  
 
 ## Live Demo
-[Hosted on Netlify](https://todo-listapp-vite.netlify.app/)
+[Hosted on Netlify](https://mudd-weather-app.netlify.app/)
 
 ---
 
