@@ -15,6 +15,9 @@ Each folder inside this repository represents a standalone project, built while 
  - **Weather App**  
   React app using OpenWeather API to display real-time weather with search history and theme toggle.  
   [Source Code](./Weather-App)
+- **Expense Manager**  
+  React app to manage daily expenses with add, edit, delete, and search functionality. Includes category-wise spending report and mobile-responsive design.  
+  [Source Code](./Expense-Manager)
 
 *(More projects will be added as I learn and build new things)*
 
