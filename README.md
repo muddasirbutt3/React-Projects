@@ -19,6 +19,10 @@ Each folder inside this repository represents a standalone project, built while 
   React app to manage daily expenses with add, edit, delete, and search functionality. Includes category-wise spending report and mobile-responsive design.  
   [Source Code](./Expense-Manager)
 
+- **Quiz App**  
+  React-based trivia quiz game with shuffled options, timer, and score tracking. Features interactive option selection with instant highlighting and a responsive layout.  
+  [Source Code](./Quiz-App)
+
 *(More projects will be added as I learn and build new things)*
 
 ## What I Learned
