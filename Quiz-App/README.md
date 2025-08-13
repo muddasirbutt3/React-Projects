@@ -28,7 +28,5 @@ A responsive web-based quiz application built with **React** that fetches questi
 
 ## ⚡ How to Run Locally
    ```bash
-   git clone https://github.com/your-username/quiz-app.git
-   cd quiz-app
    npm install
    npm run dev
