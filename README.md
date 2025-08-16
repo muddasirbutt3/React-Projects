@@ -23,6 +23,10 @@ Each folder inside this repository represents a standalone project, built while 
   React-based trivia quiz game with shuffled options, timer, and score tracking. Features interactive option selection with instant highlighting and a responsive layout.  
   [Source Code](./Quiz-App)
 
+- **QR Code Generator**  
+  React app to generate QR codes from any text/URL with download option and modern UI.  
+  [Source Code](./QR-Code-Generator)
+
 *(More projects will be added as I learn and build new things)*
 
 ## What I Learned
