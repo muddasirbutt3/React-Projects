@@ -10,9 +10,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFEFF;
+  background-color: #fffeff;
 }
-.title{
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffeff;
+}
+.title {
   text-align: center;
   margin-bottom: 10px;
   font-size: 28px;
@@ -20,8 +28,13 @@ body {
 }
 .main {
   width: 350px;
-  background-color: #FFFEFF;
+  background-color: #fffeff;
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 567px) {
+  .main {
+    width: 85%;
+  }
 }
