@@ -16,26 +16,26 @@ function App() {
   });
   const themeStyle = {
     main: (theme) => ({
-      // background: theme ? 'linear-gradient(135deg, #60A5FA, #3B82F6)' : 'linear-gradient(135deg, #4FACFE, #00F2FE)',
-      background: theme ? "#FFFFFF" : "#25272D",
+      background: theme ? "#FFFFFF" : "#131A2E",
+      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
     }),
     themebtn: (theme) => ({
-      background: theme ? "#F3F4F6" : "#25272D",
-      border: theme ? "1px solid #E5E7EB" : "1px solid #121820ff",
+      background: theme ? "#F1F5F9" : "#1B2440",
+      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
     }),
     unit: (theme) => ({
-      background: theme ? "#F3F4F6" : "#25272D",
-      border: theme ? "1px solid #E5E7EB" : "1px solid #121820ff",
+      background: theme ? "#F1F5F9" : "#1B2440",
+      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
     }),
     title: (theme) => ({
-      color: theme ? "#111827" : "#F1F5F9",
+      color: theme ? "#0F172A" : "#E6EAF5",
     }),
     nav: (theme) => ({
-      background: theme ? "#F3F4F6" : "#121212",
-      border: theme ? "1px solid #E5E7EB" : "1px solid #27282E",
+      background: theme ? "#F1F5F9" : "#1B2440",
+      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
     }),
   };
-  document.body.style.backgroundColor = theme ? '#F9FAFB' : '#23252a'
+  document.body.style.backgroundColor = theme ? "#EEF2FF" : "#0B1020";
   useEffect(() => {
     localStorage.setItem("prevSearch", JSON.stringify(prevSearches));
   }, [prevSearches]);

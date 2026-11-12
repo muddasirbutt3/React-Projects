@@ -1,11 +1,12 @@
 .img {
   width: 60%;
-  height: 150px;
+  height: 140px;
   background-position: center;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.25));
 }
 .img img {
   width: 100%;
@@ -19,123 +20,124 @@
 .error img {
   width: 100%;
 }
-
 .temp {
-  font-size: 38px;
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 .city {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 .desc {
-  margin-bottom: 10px;
-  color: aliceblue;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+  opacity: 0.85;
+  font-size: 14px;
 }
 .group {
   display: flex;
-  width: 90%;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
-  padding: 10px 0px;
-  background-color: #ffffff3e;
-  color: black;
+  border-radius: 16px;
+  padding: 12px 0px;
+  background-color: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+  color: white;
 }
 .item {
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0px 8px;
-  border-left: 1px solid black;
+  gap: 0px 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
 }
 .item1 {
-  width: 40%;
+  width: 50%;
   border: none;
 }
 .text {
-  font-size: 16px;
-  color: aliceblue;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
 }
 .value {
-  font-size: 20px;
-  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
 }
 .icon {
   align-content: center;
-  font-size: 26px;
+  font-size: 24px;
+  color: #ffffff;
   max-height: 200px;
 }
 .box {
   width: 100%;
-  min-height: 230px;
-  border-radius: 12px;
+  min-height: 240px;
+  border-radius: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: #23252a;
   text-align: center;
-  border: 1px solid black;
-  padding: 10px;
-  transition: background 0.3s ease-in;
+  padding: 16px;
+  transition: all 0.3s ease-in;
 }
 .box img {
-  width: 60%;
+  width: 55%;
   margin-bottom: 10px;
 }
 .box p {
   width: 100%;
-  color: #7c818c;
+  font-size: 14px;
+  color: #8b95b5;
 }
 .weather {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px 16px;
   transition: all 0.3s ease-in;
 }
 .loading {
   width: 100%;
   height: 40px;
-  background-color: #282b2f;
-  border-radius: 8px;
+  background-color: #1b2440;
+  border-radius: 12px;
   text-align: center;
   color: white;
   align-content: center;
 }
 @media (max-width: 576px) {
+  .temp {
+    font-size: 44px;
+  }
   .city {
-    font-size: 20px;
-  }
-  .desc {
-    margin-bottom: 6px;
-  }
-  .group {
-    padding: 8px 0px;
-  }
-  .item {
-    width: 55%;
-  }
-  .item1 {
-    width: 45%;
-  }
-  .text {
-    font-size: 14px;
-    color: aliceblue;
-  }
-  .value {
     font-size: 18px;
   }
+  .desc {
+    margin-bottom: 12px;
+  }
+  .group {
+    padding: 10px 0px;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .value {
+    font-size: 16px;
+  }
   .icon {
-    font-size: 24px;
+    font-size: 20px;
   }
   .box {
     min-height: 220px;
-    padding: 8px;
+    padding: 12px;
   }
 }

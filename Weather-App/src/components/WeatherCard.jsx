@@ -4,23 +4,18 @@ import "./WeatherCard.css";
 export const WeatherCard = ({ data, unit, isFirst, theme }) => {
   const style = {
     first: (theme) => ({
-      background: theme ? "#F3F4F6" : "#23252a",
-      border: theme ? "1px solid #E5E7EB" : "1px solid #121820ff",
+      background: theme ? "#F1F5F9" : "#1B2440",
+      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
     }),
     weather: (theme) => ({
-      background: theme ? "#d3d5daff" : "#23252a",
-      border: theme ? "1px solid #E5E7EB" : "1px solid #121820ff",
+      background: theme
+        ? "linear-gradient(160deg, #6366F1, #8B5CF6)"
+        : "linear-gradient(160deg, #312E81, #1E1B4B)",
+      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
+      boxShadow: "0 14px 30px rgba(99, 102, 241, 0.3)",
     }),
     text: (theme) => ({
-      color: theme ? "#23252a":"#d3d5daff"  ,
-    }),
-    weather: (theme) => ({
-      background: theme ? "#d3d5daff" : "#23252a",
-      border: theme ? "1px solid #E5E7EB" : "1px solid #121820ff",
-    }),
-    weather: (theme) => ({
-      background: theme ? "#d3d5daff" : "#23252a",
-      border: theme ? "1px solid #E5E7EB" : "1px solid #121820ff",
+      color: "#FFFFFF",
     }),
   };
   if (isFirst) {
@@ -31,11 +26,11 @@ export const WeatherCard = ({ data, unit, isFirst, theme }) => {
       </div>
     );
   }
-  
-  if (data == 'city not found') {
+
+  if (data == "city not found") {
     return (
       <div className="box" style={style.first(theme)}>
-        <img src="/404.png" className="img69"/>
+        <img src="/404.png" className="img69" />
         <p>No city found.</p>
       </div>
     );
@@ -55,7 +50,9 @@ export const WeatherCard = ({ data, unit, isFirst, theme }) => {
       <div className="city" style={style.text(theme)}>
         {data.name}, {data.sys.country}
       </div>
-      <div className="desc" style={style.text(theme)}>{data.weather[0].description}</div>
+      <div className="desc" style={style.text(theme)}>
+        {data.weather[0].description}
+      </div>
       <div className="group">
         <div className="item item1">
           <div className="icon">
