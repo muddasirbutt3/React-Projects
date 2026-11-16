@@ -1,97 +1,168 @@
+:root {
+  --bg: #eceff2;
+  --surface: #ffffff;
+  --surface-alt: #f6f7f9;
+  --line: #d9dee4;
+  --ink: #1c2430;
+  --muted: #5f6b7a;
+  --accent: #1d5c7a;
+  --accent-hover: #164a63;
+  --danger: #b4372c;
+  --danger-soft: #fbeeec;
+  --radius: 8px;
+  --overlay: rgba(28, 36, 48, 0.5);
+  --focus: 0 0 0 3px rgba(29, 92, 122, 0.25);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
 }
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
 #root {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding: 40px 16px;
 }
+
 .main {
-  width: 75%;
-  /* height: 550px; */
-  background-color: #f3f4f6;
-  border-radius: 12px;
-  padding: 20px;
+  width: 100%;
+  max-width: 960px;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 28px;
   position: relative;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.18);
 }
+
 .main h1 {
-  margin-bottom: 20px;
-  font-size: 38px;
+  margin-bottom: 22px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
+
 .feilds {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  gap: 12px;
+  margin-bottom: 18px;
 }
-.search-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
+
+.search-group,
 .action-group {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  gap: 8px;
 }
-.action-group button {
-  padding: 6px 10px;
-  border-radius: 8px;
+
+button {
   font-size: 14px;
-  font-weight: bold;
-  color: aliceblue;
-  border: none;
-  outline: none;
+  font-weight: 600;
   cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
-.search-group input {
-  width: 250px;
-  height: 30px;
-  padding: 6px;
-  border-radius: 8px;
-  font-size: 14px;
-  border: none;
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
   outline: none;
+  box-shadow: var(--focus);
 }
+
+.action-group button,
 .search-group button {
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: #3b82f6;
-  color: aliceblue;
+  height: 38px;
+  padding: 0 16px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
 }
-#report {
-  background-color: #f59e0b;
-}
+
 #add {
-  background-color: #10b981;
+  background-color: var(--accent);
+  color: #fff;
 }
+#add:hover {
+  background-color: var(--accent-hover);
+}
+
+#report {
+  background-color: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+#report:hover {
+  background-color: var(--surface-alt);
+  border-color: #b9c1cb;
+}
+
+.search-group input {
+  width: 260px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  color: var(--ink);
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+}
+.search-group input::placeholder {
+  color: #8a94a2;
+}
+.search-group input:focus {
+  border-color: var(--accent);
+}
+
+.search-group button {
+  background-color: var(--ink);
+  color: #fff;
+}
+.search-group button:hover {
+  background-color: #323d4d;
+}
+
+@media (max-width: 720px) {
+  .feilds {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-group input {
+    flex: 1;
+    width: auto;
+  }
+}
+
 @media (max-width: 576px) {
+  #root {
+    padding: 12px 8px;
+  }
   .main {
-    width: 95%;
-    padding: 10px;
+    padding: 16px 12px;
   }
   .main h1 {
-    margin-bottom: 10px;
-    font-size: 32px;
-  }
-  .feilds {
-    align-items: start;
-    gap: 10px;
-    flex-direction: column;
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin-bottom: 14px;
   }
 }

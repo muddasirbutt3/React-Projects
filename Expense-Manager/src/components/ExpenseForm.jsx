@@ -10,34 +10,44 @@ function ExpenseForm({
   setSearch,
   setSearchResult,
 }) {
+  const isEditing = edit != "";
+
+  // Today's date as YYYY-MM-DD with zero-padded month and day
   let currDate = new Date();
-  let datevalue = `${currDate.getFullYear()}-${
-    currDate.getMonth() + 1 < 9
-      ? "0" + (currDate.getMonth() + 1)
-      : currDate.getMonth() + 1
-  }-${
-    currDate.getDate() + 1 < 9 ? "0" + currDate.getDate() : currDate.getDate()
-  }`;
-  let [name, setName] = useState(() => (edit != "" ? edit.name : ""));
-  let [amount, setAmonut] = useState(() => (edit != "" ? edit.amount : ""));
+  let datevalue = `${currDate.getFullYear()}-${String(
+    currDate.getMonth() + 1,
+  ).padStart(2, "0")}-${String(currDate.getDate()).padStart(2, "0")}`;
+
+  let [name, setName] = useState(() => (isEditing ? edit.name : ""));
+  let [amount, setAmonut] = useState(() => (isEditing ? edit.amount : ""));
   let [category, setCategory] = useState(() =>
-    edit != "" ? edit.category : ""
+    isEditing ? edit.category : "",
   );
-  let [date, setDate] = useState(() => (edit != "" ? edit.date : datevalue));
+  let [date, setDate] = useState(() => (isEditing ? edit.date : datevalue));
   let formTag = useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
     let form = new FormData(formTag.current);
-    let fromData = { ...Object.fromEntries(form.entries()), id: Date.now() };
-    console.log(fromData);
+    let fromData = {
+      ...Object.fromEntries(form.entries()),
+      // keep the original id when editing
+      id: isEditing ? edit.id : Date.now(),
+    };
 
-    let isEmpty = Object.values(fromData).some((value) =>
-      isNaN(value) ? value.trim() === "" : value == ""
-    );
-    if (isEmpty) return;
-    edit != ""
-      ? setData(data.map((ele, ind) => (ind === edit.index ? fromData : ele)))
+    const validAmount = Number(fromData.amount);
+    if (
+      fromData.name.trim() === "" ||
+      fromData.amount.trim() === "" ||
+      !Number.isFinite(validAmount) ||
+      validAmount <= 0 ||
+      fromData.category === "" ||
+      fromData.date === ""
+    )
+      return;
+
+    isEditing
+      ? setData(data.map((ele) => (ele.id === edit.id ? fromData : ele)))
       : setData((prev) => [...prev, fromData]);
     setEdit("");
     formTag.current.reset();
@@ -53,8 +63,8 @@ function ExpenseForm({
     <div className="page">
       <form className="form" onSubmit={(e) => handleSubmit(e)} ref={formTag}>
         <div className="group-title">
-          <h1>Add Expense</h1>
-          <button className="cancel" onClick={handleClick}>
+          <h1>{isEditing ? "Edit Expense" : "Add Expense"}</h1>
+          <button type="button" className="cancel" onClick={handleClick}>
             <i className="fa-solid fa-xmark"></i>
           </button>
         </div>
@@ -66,7 +76,10 @@ function ExpenseForm({
           placeholder="Expense Name"
         />
         <input
-          type="text"
+          type="number"
+          min="0"
+          step="any"
+          inputMode="decimal"
           onChange={(e) => setAmonut(e.target.value)}
           value={amount}
           name="amount"
@@ -95,7 +108,7 @@ function ExpenseForm({
           value={date}
         />
         <button type="submit" className="btn">
-          Add Expense
+          {isEditing ? "Save Changes" : "Add Expense"}
         </button>
       </form>
     </div>

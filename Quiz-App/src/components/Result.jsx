@@ -12,7 +12,9 @@ function Result({ setPopUp, data, userArr, score, setUserArr }) {
   return (
     <div className="result">
       <div className="head">Your Score:</div>
-      <div className="score">{score} Out of {data.length}</div>
+      <div className="score">
+        {score} Out of {data.length}
+      </div>
       <div className="ans-keys">
         {userArr.map((ele, ind) => (
           <div className="key" key={ind}>
@@ -25,7 +27,7 @@ function Result({ setPopUp, data, userArr, score, setUserArr }) {
             <p
               className="user"
               dangerouslySetInnerHTML={{
-                __html: ele ? ele : 'No selected.',
+                __html: ele ? ele : "No selected.",
               }}
               style={{
                 backgroundColor:

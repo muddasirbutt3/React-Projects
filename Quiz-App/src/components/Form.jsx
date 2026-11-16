@@ -17,7 +17,14 @@ function Form({ setData, setPopUp }) {
   }
   function getURL(e) {
     e.preventDefault();
-    baseURL += `amount=${amount}`;
+
+    const num = Number(amount);
+    if (amount === "" || !Number.isInteger(num) || num < 5 || num > 50) {
+      error("Please enter a number of questions between 5 and 50.");
+      return;
+    }
+
+    baseURL += `amount=${num}`;
     if (category != "any") {
       baseURL += `&category=${category}`;
     }
@@ -28,14 +35,12 @@ function Form({ setData, setPopUp }) {
     axios
       .get(baseURL)
       .then((res) => {
-        console.log(res.data);
         setData(res.data.results);
         setPopUp("question");
         baseURL = `https://opentdb.com/api.php?`;
       })
       .catch((err) => {
         error(err.message);
-        console.log(err);
       });
   }
   return (
@@ -98,8 +103,7 @@ function Form({ setData, setPopUp }) {
       <button type="submit" onClick={(e) => getURL(e)}>
         Start Quiz
       </button>
-      <div className="error" ref={errorDiv} style={{display:'none'}}>
-      </div>
+      <div className="error" ref={errorDiv} style={{ display: "none" }}></div>
     </form>
   );
 }

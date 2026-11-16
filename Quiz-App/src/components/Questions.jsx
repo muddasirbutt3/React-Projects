@@ -9,7 +9,6 @@ function Questions({ data, setPopUp, setUserArr, score }) {
   let [option, setOption] = useState([]);
 
   useEffect(() => {
-    console.log(count);
     if (count + 1 > data.length) return;
     let shuffled = [
       ...data[count].incorrect_answers,
@@ -19,7 +18,6 @@ function Questions({ data, setPopUp, setUserArr, score }) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
-    console.log(data[count].correct_answer);
     setOption(shuffled);
     setTimer(30);
     const interval = setInterval(() => {

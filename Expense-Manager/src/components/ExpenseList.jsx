@@ -9,7 +9,6 @@ function ExpenseList({
   search,
   setSearch,
   setSearchResult,
-  isSearch,
 }) {
   function handleEdit(id) {
     let ind = data.findIndex((ele) => ele.id == id);
@@ -36,7 +35,8 @@ function ExpenseList({
         <div className="item-action-btn">Action</div>
       </nav>
       <div className="itembox">
-        {(data.length === 0 && search === null ) || (search !== null && search.length === 0 ) ? (
+        {(data.length === 0 && search === null) ||
+        (search !== null && search.length === 0) ? (
           <div className="noexpense">
             <p>No expense</p>
             <button onClick={() => close(true)}>Add Expense</button>

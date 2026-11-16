@@ -3,7 +3,6 @@ import "./Report.css";
 
 function Report({ setPopUp, data }) {
   const total = data.reduce((acc, item) => acc + Number(item.amount), 0);
-  console.log(total);
   const categories = [
     "Food",
     "Travel",
@@ -19,7 +18,6 @@ function Report({ setPopUp, data }) {
     .filter((item) => item.category == cat)
     .reduce((acc,i) => acc + Number(i.amount),0)
   }))
-  console.log(categoryTotals);
   return (
     <div className="report">
       <div className="stats">
