@@ -5,7 +5,7 @@ This app helps you track daily expenses, search through records, and generate ba
 Currently, it uses **LocalStorage** to persist data.
 
 ## Live Demo
-[Hosted on Netlify](https://expense-tracker-mudd.netlify.app/)
+[Hosted on Netlify](https://track-expanse.netlify.app/)
 ---
 
 ## Features

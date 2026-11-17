@@ -10,7 +10,7 @@ Through this project, I learned:
 - Event Handling & Conditional Rendering
 
 ## Live Demo
-[Hosted on Netlify](https://todo-listapp-vite.netlify.app/)
+[Hosted on Netlify](https://to-does-list.netlify.app/)
 
 ## Features
 - Add new tasks

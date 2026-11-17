@@ -4,18 +4,16 @@ import "./WeatherCard.css";
 export const WeatherCard = ({ data, unit, isFirst, theme }) => {
   const style = {
     first: (theme) => ({
-      background: theme ? "#F1F5F9" : "#1B2440",
-      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
+      background: theme ? "#FAFAFA" : "#18181B",
+      border: theme ? "1px solid #E4E4E7" : "1px solid #27272A",
     }),
     weather: (theme) => ({
-      background: theme
-        ? "linear-gradient(160deg, #6366F1, #8B5CF6)"
-        : "linear-gradient(160deg, #312E81, #1E1B4B)",
-      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
-      boxShadow: "0 14px 30px rgba(99, 102, 241, 0.3)",
+      background: theme ? "#FAFAFA" : "#18181B",
+      border: theme ? "1px solid #E4E4E7" : "1px solid #27272A",
+      color: theme ? "#18181B" : "#FAFAFA",
     }),
     text: (theme) => ({
-      color: "#FFFFFF",
+      color: theme ? "#18181B" : "#FAFAFA",
     }),
   };
   if (isFirst) {

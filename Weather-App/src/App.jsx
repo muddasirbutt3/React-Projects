@@ -16,26 +16,26 @@ function App() {
   });
   const themeStyle = {
     main: (theme) => ({
-      background: theme ? "#FFFFFF" : "#131A2E",
-      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
+      background: theme ? "#FFFFFF" : "#111113",
+      border: theme ? "1px solid #E4E4E7" : "1px solid #27272A",
     }),
     themebtn: (theme) => ({
-      background: theme ? "#F1F5F9" : "#1B2440",
-      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
+      background: theme ? "#FFFFFF" : "#111113",
+      border: theme ? "1px solid #E4E4E7" : "1px solid #27272A",
     }),
     unit: (theme) => ({
-      background: theme ? "#F1F5F9" : "#1B2440",
-      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
+      background: theme ? "#FFFFFF" : "#111113",
+      border: theme ? "1px solid #E4E4E7" : "1px solid #27272A",
     }),
     title: (theme) => ({
-      color: theme ? "#0F172A" : "#E6EAF5",
+      color: theme ? "#18181B" : "#FAFAFA",
     }),
     nav: (theme) => ({
-      background: theme ? "#F1F5F9" : "#1B2440",
-      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
+      background: theme ? "#F4F4F5" : "#18181B",
+      border: theme ? "1px solid #E4E4E7" : "1px solid #27272A",
     }),
   };
-  document.body.style.backgroundColor = theme ? "#EEF2FF" : "#0B1020";
+  document.body.style.backgroundColor = theme ? "#F4F4F5" : "#09090B";
   useEffect(() => {
     localStorage.setItem("prevSearch", JSON.stringify(prevSearches));
   }, [prevSearches]);

@@ -1,52 +1,52 @@
 .question {
   width: 580px;
   background-color: #ffffff;
-  border-radius: 20px;
+  border: 1px solid #e3e6ea;
+  border-radius: 10px;
   padding: 26px;
-  box-shadow: 0 20px 50px rgba(31, 41, 55, 0.12);
 }
 .num-time {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
-  font-size: 14px;
+  margin-bottom: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 .timer {
-  min-width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 16px;
-  font-weight: 800;
-  color: #2f8f6b;
-  background-color: #e8f5ee;
-  border: 2px solid #49976e;
+  min-width: 40px;
+  padding: 4px 10px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  background-color: #f1f3f5;
+  border: 1px solid #e3e6ea;
+  letter-spacing: 0;
 }
 .progess {
   width: 100%;
-  height: 10px;
+  height: 6px;
   border-radius: 50px;
-  background-color: #eef0f4;
-  margin-bottom: 22px;
+  background-color: #e9ecef;
+  margin-bottom: 24px;
   overflow: hidden;
 }
 .line {
   height: 100%;
-  border-radius: 50px;
-  background: linear-gradient(90deg, #49976e, #6366f1);
-  transition: width 0.4s ease;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
 }
 .ques {
   width: 100%;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1.4;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
   color: #111827;
   margin-bottom: 22px;
 }
@@ -56,65 +56,63 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 26px;
 }
 .opt {
   width: 100%;
-  padding: 13px 16px;
-  font-size: 16px;
+  padding: 12px 14px;
+  font-size: 15px;
   color: #1f2937;
-  border-radius: 12px;
-  border-color: #e5e7eb !important;
-  background-color: #f9fafb !important;
+  border-radius: 6px;
+  border-color: #d5d9df !important;
+  background-color: #ffffff !important;
   cursor: pointer;
   transition:
-    transform 0.15s ease,
     border-color 0.15s ease,
-    background 0.15s ease;
+    background-color 0.15s ease;
 }
 .opt:hover {
-  border-color: #49976e !important;
-  background-color: #f1faf5 !important;
-  transform: translateX(4px);
+  border-color: #9aa3af !important;
+  background-color: #f8f9fa !important;
 }
 .opt[style*="212, 237, 218"] {
-  border-color: #49976e !important;
-  background-color: #e3f4ea !important;
-  box-shadow: 0 0 0 3px rgba(73, 151, 110, 0.2);
-  font-weight: 600;
+  border-color: #2563eb !important;
+  background-color: #eff4ff !important;
+  color: #1e3a8a;
+  font-weight: 500;
 }
 .btns {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid #e3e6ea;
 }
 .btns button {
-  padding: 11px 26px;
-  font-size: 15px;
-  font-weight: 700;
-  border: none;
-  border-radius: 12px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
   cursor: pointer;
-  background: linear-gradient(135deg, #49976e, #2f8f8b);
+  background-color: #2563eb;
   color: #ffffff;
-  box-shadow: 0 6px 14px rgba(73, 151, 110, 0.3);
   transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
 .btns button:hover {
-  transform: translateY(-2px);
+  background-color: #1d4ed8;
 }
 .btns .quit {
-  background: #ffffff;
-  color: #dc3545;
-  border: 1.5px solid #dc3545;
-  box-shadow: none;
+  background-color: #ffffff;
+  color: #4b5563;
+  border: 1px solid #cfd4db;
 }
 .btns .quit:hover {
-  background: #dc3545;
-  color: #ffffff;
+  background-color: #f4f5f7;
+  color: #111827;
 }
 @media (max-width: 576px) {
   .question {
@@ -122,14 +120,14 @@
     padding: 18px;
   }
   .ques {
-    font-size: 18px;
+    font-size: 17px;
   }
   .opt {
-    padding: 11px 12px;
-    font-size: 15px;
+    padding: 10px 12px;
+    font-size: 14px;
   }
   .btns button {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 9px 18px;
+    font-size: 13px;
   }
 }

@@ -3,7 +3,7 @@
 A responsive web-based quiz application built with **React** that fetches questions from the [Open Trivia DB API](https://opentdb.com/), shuffles answer options, and features a countdown timer for each question. Users can select answers, track their score, and restart or quit the quiz anytime.
 
 ## 🚀 Live Preview
-[Click Here to Play](https://quiz-app-mudd.netlify.app/)
+[Click Here to Play](https://quiziess.netlify.app/)
 
 ---
 

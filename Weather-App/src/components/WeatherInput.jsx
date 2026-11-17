@@ -10,12 +10,12 @@ export const WeatherInput = ({
 }) => {
   const style = {
     input: (theme) => ({
-      background: theme ? "#F1F5F9" : "#1B2440",
-      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
-      color: theme ? "#0F172A" : "#E6EAF5",
+      background: theme ? "#FFFFFF" : "#18181B",
+      border: theme ? "1px solid #E4E4E7" : "1px solid #27272A",
+      color: theme ? "#18181B" : "#FAFAFA",
     }),
     searchBtn: (theme) => ({
-      background: "linear-gradient(135deg, #6366F1, #8B5CF6)",
+      background: "#2563EB",
       border: "none",
     }),
   };

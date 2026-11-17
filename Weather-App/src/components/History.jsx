@@ -4,23 +4,23 @@ import "./History.css";
 export const History = ({ prevSearches, setPrevSearches, theme }) => {
   const style = {
     history: (theme) => ({
-      background: theme ? "#F1F5F9" : "#1B2440",
-      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
+      background: theme ? "#FAFAFA" : "#18181B",
+      border: theme ? "1px solid #E4E4E7" : "1px solid #27272A",
     }),
     item: (theme) => ({
-      background: theme ? "#FFFFFF" : "#131A2E",
-      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
-      color: theme ? "#0F172A" : "#E6EAF5",
+      background: theme ? "#FFFFFF" : "#111113",
+      border: theme ? "1px solid #E4E4E7" : "1px solid #27272A",
+      color: theme ? "#18181B" : "#FAFAFA",
     }),
     searchBtn: (theme) => ({
-      background: theme ? "#EEF2FF" : "#263052",
-      color: theme ? "#6366F1" : "#A5B4FC",
+      background: "transparent",
+      color: theme ? "#71717A" : "#A1A1AA",
       border: "none",
     }),
     noHistory: (theme) => ({
-      background: theme ? "#F1F5F9" : "#1B2440",
-      color: theme ? "#64748B" : "#8B95B5",
-      border: theme ? "1px solid #E2E8F0" : "1px solid #263052",
+      background: theme ? "#FAFAFA" : "#18181B",
+      color: theme ? "#71717A" : "#A1A1AA",
+      border: theme ? "1px solid #E4E4E7" : "1px solid #27272A",
     }),
   };
   function handleClick(id) {

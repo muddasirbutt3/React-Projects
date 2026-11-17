@@ -1,32 +1,26 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:
-    "Segoe UI",
-    system-ui,
-    -apple-system,
-    Arial,
-    sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
 }
-body {
+body{
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #e0f2ec 0%, #eef1fb 50%, #f3e8fb 100%);
-  background-attachment: fixed;
-  color: #1f2937;
+  background-color: #f4f5f7;
+  color: #111827;
 }
-#root {
+#root{
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main {
+.main{
   width: 100%;
   min-height: 100vh;
   display: flex;
