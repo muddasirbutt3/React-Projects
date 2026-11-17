@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-pulse-once {
+  animation: fade-up 0.35s ease-out;
+}
+.thin-scroll {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #d6d3d1 transparent; /* Firefox: thumb, track */
+}
+.thin-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.thin-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: #d6d3d1; /* stone-300 */
+  border-radius: 9999px;
+}
+.thin-scroll::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e; /* stone-400 */
+}
